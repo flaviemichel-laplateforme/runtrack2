@@ -6,17 +6,27 @@ $hauteur = 5; // hauteur du triangle
 
 for ($i = 1; $i <= $hauteur; $i++) {
     // Espaces pour centrer
-    echo str_repeat(" ", $hauteur - $i);
+    for ($j = 0; $j < $hauteur - $i; $j++) {
+        echo " ";
+    }
 
     if ($i === 1) {
         // Sommet du triangle
         echo "/\\";
     } elseif ($i === $hauteur) {
         // Base : un /, des underscores, puis un \
-        echo "/" . str_repeat("_", ($i - 1) * 2) . "\\";
+        echo "/";
+        for ($k = 0; $k < ($i - 1) * 2; $k++) {
+            echo "_";
+        }
+        echo "\\";
     } else {
         // Milieu : un /, des espaces vides, puis un \
-        echo "/" . str_repeat(" ", ($i - 1) * 2) . "\\";
+        echo "/";
+        for ($k = 0; $k < ($i - 1) * 2; $k++) {
+            echo " ";
+        }
+        echo "\\";
     }
 
     echo "\n";
