@@ -60,7 +60,18 @@ $couleur = ["bleu", "blanc", "rouge"];
         <tr>
             <td>Array Tableau contenant plusieurs valeurs</td>
             <td>Couleurs</td>
-            <td><?php echo implode(", ", $couleur); ?></td>
+            <td><?php 
+                // Afficher les couleurs sans fonctions système
+                $i = 0;
+                while (isset($couleur[$i])) {
+                    echo $couleur[$i];
+                    // Vérifier s'il y a un élément suivant pour ajouter la virgule
+                    if (isset($couleur[$i + 1])) {
+                        echo ", ";
+                    }
+                    $i++;
+                }
+            ?></td>
         </tr>
     </table>
 </body>
