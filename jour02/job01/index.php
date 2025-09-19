@@ -9,9 +9,9 @@ Le nombre 42 doit être en gras et souligné (<b><u>...).*/
 for ($i = 0; $i <= 1337; $i++) {
     if ($i === 42) {
         // 42 en gras et souligné
-        echo "<b><u>42</u></b><br />\n";
+        echo "<b><u>42</u></b><br />";
     } else {
-        echo $i . "<br />\n";
+        echo $i . "<br />";
     }
 }
 ?>
