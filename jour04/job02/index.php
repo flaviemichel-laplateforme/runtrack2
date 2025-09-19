@@ -21,18 +21,18 @@
         </form>
         <?php
         // Vérifier si des données GET existent avec isset() seulement
-        if (isset($_GET['name']) || isset($_GET['prenom'])) {
+        if (isset($_GET['nom']) || isset($_GET['prenom'])) {
             // Compter manuellement les arguments GET
             $count = 0;
-            if (isset($_GET['name'])) $count++;
+            if (isset($_GET['nom'])) $count++;
             if (isset($_GET['prenom'])) $count++;
 
             echo "Le nombre d'arguments GET envoyés est: " . $count . "<br>";
             echo "Données reçues :<br>";
             
             // Afficher chaque donnée avec isset()
-            if (isset($_GET['name'])) {
-                echo "Nom : " . $_GET['name'] . "<br>";
+            if (isset($_GET['nom'])) {
+                echo "Nom : " . $_GET['nom'] . "<br>";
             }
             if (isset($_GET['prenom'])) {
                 echo "Prénom : " . $_GET['prenom'] . "<br>";
@@ -55,8 +55,8 @@
            
             <?php
             // Afficher les données dans un tableau HTML sans fonctions système
-            if (isset($_GET['name'])) {
-                echo "<tr><td>Nom</td><td>" . $_GET['name'] . "</td></tr>";
+            if (isset($_GET['nom'])) {
+                echo "<tr><td>Nom</td><td>" . $_GET['nom'] . "</td></tr>";
             }
             if (isset($_GET['prenom'])) {
                 echo "<tr><td>Prénom</td><td>" . $_GET['prenom'] . "</td></tr>";
