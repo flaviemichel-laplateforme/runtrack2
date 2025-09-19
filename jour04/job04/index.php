@@ -12,7 +12,9 @@
         <h1>Formulaire </h1>
         <form action="" method="post">
             <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
+            <input type="text" id="nom" name="nom" required>*
+
+
 
             <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="prenom" required>
@@ -21,7 +23,7 @@
         </form>
         <?php
         // Vérifier si des données POST existent avec isset() seulement
-        if (isset($_POST['nom']) || isset($_POST['prenom'])) {
+        if (isset($_POST['nom']) && isset($_POST['prenom'])) {
             // Compter manuellement les arguments POST
             $count = 0;
             if (isset($_POST['nom'])) $count++;
@@ -74,6 +76,7 @@
                 th {
                     background-color: #f2f2f2;
                 }
+                
             </style>
         </table>
     </div>
