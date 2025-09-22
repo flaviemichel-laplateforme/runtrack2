@@ -34,97 +34,70 @@
         /*     // Code à exécuter si les deux champs existent */
         /* } */
 
-        if (isset($_GET ['largeur'] ) && (isset($_GET []) ))
-
-        /* ÉTAPE 4: Récupérer et valider les valeurs */
-        /* MÉTHODE: */
-        /* $largeur = $_GET['largeur']; */
-        /* $hauteur = $_GET['hauteur']; */
-        /* if ($largeur > 0 && $hauteur > 0) { */
-        /*     // Continuer seulement si valeurs valides */
-        /* } */
-         
-            // Dessiner le toit
-            $i = 1;
-            while ($i <= $hauteur) {}
-                // Espaces avant le "/"
-                $j = 0;
-                while ($j < ($largeur - $i)) {
-                    echo " ";
-                    $j++;
+        if (isset($_GET['largeur']) && isset($_GET['hauteur'])) {
+            // Récupérer et valider les valeurs
+            $largeur = $_GET['largeur'];
+            $hauteur = $_GET['hauteur'];
+            
+            if ($largeur > 0 && $hauteur > 0) {
+                
+                // DESSINER LE TOIT
+                $i = 1;
+                while ($i <= $hauteur) {
+                    // Espaces avant le "/"
+                    $j = 0;
+                    while ($j < ($hauteur - $i)) {
+                        echo " ";
+                        $j++;
+                    }
+                    
+                    // Afficher "/"
+                    echo "/";
+                    
+                    // Espaces entre "/" et "\"
+                    $k = 0;
+                    while ($k < (($i - 1) * 2)) {
+                        echo " ";
+                        $k++;
+                    }
+                    
+                    // Afficher "\"
+                    echo "\\";
+                    
+                    // Retour à la ligne
+                    echo "\n";
+                    $i++;
                 }
                 
-                // Afficher "/"
-                echo "/";
+                // DESSINER LES MURS
+                $m = 1;
+                while ($m <= $hauteur) {
+                    echo "|";
+                    
+                    // Première et dernière ligne : underscores
+                    if ($m === 1 || $m === $hauteur) {
+                        $n = 0;
+                        while ($n < ($largeur * 2 - 2)) {
+                            echo "_";
+                            $n++;
+                        }
+                    } else {
+                        // Lignes du milieu : espaces
+                        $n = 0;
+                        while ($n < ($largeur * 2 - 2)) {
+                            echo " ";
+                            $n++;
+                        }
+                    }
+                    
+                    echo "|\n";
+                    $m++;
+                }
+            } else {
+                echo "Veuillez entrer des valeurs positives.";
             }
-          
-
-        /* ÉTAPE 5: Dessiner le toit (triangle) */
-        /* MÉTHODE DÉTAILLÉE: */
-        /* for ($i = 1; $i <= $hauteur; $i++) { */
-        /*     // 5.1: Calculer espaces avant "/" */
-        /*     $espaces_avant = $hauteur - $i; */
-        /*     for ($j = 0; $j < $espaces_avant; $j++) { */
-        /*         echo " "; */
-        /*     } */
-        /*     */
-        /*     // 5.2: Afficher "/" */
-        /*     echo "/"; */
-        /*     */
-        /*     // 5.3: Calculer espaces entre "/" et "\" */
-        /*     $espaces_milieu = ($i - 1) * 2; */
-        /*     for ($k = 0; $k < $espaces_milieu; $k++) { */
-        /*         echo " "; */
-        /*     } */
-        /*     */
-        /*     // 5.4: Afficher "\" */
-        /*     echo "\\"; */
-        /*     */
-        /*     // 5.5: Retour à la ligne */
-        /*     echo "\n"; */
-        /* } */
-       
-        // for ($i = 1; $i <= $hauteur; $i++) {
-
-
-        
-        /* ÉTAPE 6: Dessiner les murs (rectangle) */
-        /* MÉTHODE DÉTAILLÉE: */
-        /* for ($j = 1; $j <= $hauteur; $j++) { */
-        /*     // 6.1: Afficher "|" à gauche */
-        /*     echo "|"; */
-        /*     */
-        /*     // 6.2: Vérifier si première ou dernière ligne */
-        /*     if ($j === 1 || $j === $hauteur) { */
-        /*         // 6.3: Ligne avec underscores */
-        /*         $largeur_mur = $largeur * 2 - 2; */
-        /*         for ($k = 0; $k < $largeur_mur; $k++) { */
-        /*             echo "_"; */
-        /*         } */
-        /*     } else { */
-        /*         // 6.4: Ligne avec espaces */
-        /*         $largeur_mur = $largeur * 2 - 2; */
-        /*         for ($k = 0; $k < $largeur_mur; $k++) { */
-        /*             echo " "; */
-        /*         } */
-        /*     } */
-        /*     */
-        /*     // 6.5: Afficher "|" à droite + retour ligne */
-        /*     echo "|\n"; */
-        /* } */
-        
-        /* ÉTAPE 7: Alternative avec boucles WHILE (sans fonctions système) */
-        /* MÉTHODE WHILE: */
-        /* $i = 1; */
-        /* while ($i <= $hauteur) { */
-        /*     $j = 0; */
-        /*     while ($j < $espaces_avant) { */
-        /*         echo " "; */
-        /*         $j++; */
-        /*     } */
-        /*     $i++; */
-        /* } */
-        
+        }
+            
         ?>
         </pre>
     </div>
