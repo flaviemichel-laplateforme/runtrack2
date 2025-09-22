@@ -27,6 +27,19 @@ $couleur = ["bleu", "blanc", "rouge"];
         th {
             background-color: #f2f2f2;
         }
+        
+        /* Couleurs par colonne */
+        td:nth-child(1), th:nth-child(1) {
+            background-color: #ffebcd; /* Beige clair pour la colonne Type */
+        }
+        
+        td:nth-child(2), th:nth-child(2) {
+            background-color: #e6f3ff; /* Bleu clair pour la colonne Nom */
+        }
+        
+        td:nth-child(3), th:nth-child(3) {
+            background-color: #f0fff0; /* Vert clair pour la colonne Valeur */
+        }
     </style>
 </head>
 <body>
