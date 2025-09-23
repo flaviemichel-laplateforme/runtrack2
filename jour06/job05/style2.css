@@ -1,0 +1,89 @@
+/* STYLE 2 - Thème Vert Nature */
+body {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 50%, #16a085 100%);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: #f4f7f4;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 3px solid #27ae60;
+}
+
+h1 {
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.style-form {
+    background: linear-gradient(145deg, #e8f5e8, #d5e8d5);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px dashed #27ae60;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    color: #1e3a1e;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+select {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #27ae60;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    background: #ffffff;
+    font-family: 'Georgia', serif;
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(45deg, #27ae60, #16a085);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.5);
+}
+
+.info {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(90deg, #d5f4e6, #bde3d6);
+    border: 2px solid #27ae60;
+    border-radius: 10px;
+}
+
+.info p {
+    margin: 0;
+    color: #1e3a1e;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

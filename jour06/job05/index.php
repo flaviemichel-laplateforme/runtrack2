@@ -1,49 +1,53 @@
-
-
+<?php
 /*Job 05
-Créer un formulaire qui contient une liste déroulante nommée “style” et un bouton
+Créer un formulaire qui contient une liste déroulante nommée "style" et un bouton
 submit. 
-La liste déroulante doit proposer au moins “style1”, “style2” et “style3. 
-Créer 3 fichiers css nommés “style1.css”, “style2.css” et “style3.css”. 
+La liste déroulante doit proposer au moins "style1", "style2" et "style3. 
+Créer 3 fichiers css nommés "style1.css", "style2.css" et "style3.css". 
 Chaque style doit avoir
-des effets sur le design du formulaire, la couleur de background, la police d’écriture...
-Lorsque l’on valide le formulaire, le style sélectionné doit être inclus et donc le visuel
+des effets sur le design du formulaire, la couleur de background, la police d'écriture...
+Lorsque l'on valide le formulaire, le style sélectionné doit être inclus et donc le visuel
 doit changer. */
+
+// Récupérer le style sélectionné
+$styleChoisi = "style1"; // Style par défaut
+if (isset($_POST['style'])) {
+    $styleSelectionne = $_POST['style'];
+    if ($styleSelectionne === "Style1") {
+        $styleChoisi = "style1";
+    } elseif ($styleSelectionne === "Style2") {
+        $styleChoisi = "style2";
+    } elseif ($styleSelectionne === "Style3") {
+        $styleChoisi = "style3";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Formulaires</title>
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet" link="./style1.css"
- --- IGNORE --- 
-    >
+    <!-- LE LIEN CSS DYNAMIQUE SE MET ICI -->
+    <link rel="stylesheet" type="text/css" href="<?php echo $styleChoisi; ?>.css?v=<?php echo time(); ?>">
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Formulaire de contact</h1>
 
-        <form action="" method="post">
-            <label  for="civilite">Civilité:</label>
-            <select  placeholder="civilite" type="text" id="civilite" name="civilite" required>*
-                <option>Mme</option>
-                <option>Mr</option>
+        <form action="" method="post" class="style-form">
+            <label for="style">Choisir son style:</label>
+            <select id="style" name="style" required>
+                <option value="Style1" <?php echo (isset($_POST['style']) && $_POST['style'] === 'Style1') ? 'selected' : ''; ?>>Style1 - Bleu Moderne</option>
+                <option value="Style2" <?php echo (isset($_POST['style']) && $_POST['style'] === 'Style2') ? 'selected' : ''; ?>>Style2 - Vert Nature</option>
+                <option value="Style3" <?php echo (isset($_POST['style']) && $_POST['style'] === 'Style3') ? 'selected' : ''; ?>>Style3 - Sombre Orange</option>
             </select>
+            <input type="submit" value="Changer de style" class="btn-submit">
+        </form>
 
-            <label for="nom">Nom:</label>
-            <input  placeholder="Nom" type="text" id="nom" name="nom">
-
-            <label for="prenom">Prénom:</label>
-            <input  placeholder="Prénom" type="text" id="prenom" name="prenom">
-
-            <label for="style">Style:</label>
-            <select placeholder="Style" type="text" id="datstylee" name="style">
-                <option>Style1</option>
-                <option>Style2</option>
-                <option>Style3</option>
-            </select>
- 
+        <div class="info">
+            <p>Style actuel : <strong><?php echo $styleChoisi; ?></strong></p>
+        </div>
+    </div>
 </body>
 </html>
 

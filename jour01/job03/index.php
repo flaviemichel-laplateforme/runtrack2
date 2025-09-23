@@ -74,7 +74,7 @@ $couleur = ["bleu", "blanc", "rouge"];
             <td>Array Tableau contenant plusieurs valeurs</td>
             <td>Couleurs</td>
             <td><?php 
-                // Afficher les couleurs sans fonctions système
+            
                 $i = 0;
                 while (isset($couleur[$i])) {
                     echo $couleur[$i];
