@@ -12,3 +12,4 @@ function hello() {
 
 // Appel de la fonction pour l'exécuter
 hello();
+
