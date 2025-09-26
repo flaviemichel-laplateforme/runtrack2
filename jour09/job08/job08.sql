@@ -1,1 +1,1 @@
-SELECT etudiants,COUNT(*);
+SELECT COUNT(*) FROM etudiants;
