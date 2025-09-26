@@ -1,2 +1,2 @@
 SELECT * FROM etudiants
-WHERE naissance >= '2007-01-01';
+WHERE DATEDIFF(CURDATE(), naissance) / 365.25 > 18;
