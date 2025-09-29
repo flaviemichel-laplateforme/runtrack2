@@ -16,7 +16,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Requête SQL pour récupérer tous les étudiants
-    $sql = "SELECT * FROM etudiants WHERE DATEDIFF(CURDATE(), naissance) / 365.25 > 18";
+    $sql = "SELECT * FROM etudiants WHERE DATEDIFF(CURDATE(), naissance) / 365.25 < 18";
     $stmt = $pdo->query($sql);
 
     // Récupération de toutes les données
