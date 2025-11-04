@@ -1,14 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jour 04 - Job 01</title>
- 
+
 </head>
+
 <body>
-    <div class="container">
+    <div>
         <h1>Formulaire </h1>
         <form action="" method="get">
             <label for="name">Nom :</label>
@@ -26,10 +27,10 @@
             $count = 0;
             if (isset($_GET['name'])) $count++;
             if (isset($_GET['email'])) $count++;
-            
+
             echo "Le nombre d'arguments GET envoyés est: " . $count . "<br>";
             echo "Données reçues :<br>";
-            
+
             // Afficher chaque donnée avec isset()
             if (isset($_GET['name'])) {
                 echo "name : " . $_GET['name'] . "<br>";
@@ -41,7 +42,8 @@
             echo "Aucune donnée GET reçue. Remplissez le formulaire ci-dessus.";
         }
         ?>
-        
+
     </div>
 </body>
+
 </html>
