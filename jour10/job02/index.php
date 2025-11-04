@@ -2,7 +2,8 @@
 
 <!-- Job 02
 En utilisant php et mysqli, connectez-vous à la base de données “jour09”. A l’aide d’une
-requête SQL, récupérez le nom et la capacité de chacune des salles. Affichez le résultat
+requête SQL, récupérez le nom et la capacité de chacune des salles. 
+Affichez le résultat
 de cette requête dans un tableau html. La première ligne de votre tableau html doit
 contenir le nom des champs. Les suivantes doivent contenir les données présentes
 dans votre base de données. -->

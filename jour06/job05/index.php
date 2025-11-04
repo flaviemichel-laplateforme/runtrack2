@@ -25,11 +25,13 @@ if (isset($_POST['style'])) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Formulaires</title>
     <!-- LE LIEN CSS DYNAMIQUE SE MET ICI -->
     <link rel="stylesheet" type="text/css" href="<?php echo $styleChoisi; ?>.css?v=<?php echo time(); ?>">
 </head>
+
 <body>
     <div class="container">
         <h1>Formulaire de contact</h1>
@@ -49,5 +51,5 @@ if (isset($_POST['style'])) {
         </div>
     </div>
 </body>
-</html>
 
+</html>

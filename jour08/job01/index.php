@@ -11,7 +11,7 @@ if (isset($_POST['reset'])) {
 }
 
 if (!isset($_SESSION['nbvisites'])) {
-    $_SESSION['nbvisites']= 0;
+    $_SESSION['nbvisites'] = 0;
 }
 
 $_SESSION['nbvisites']++;
@@ -19,6 +19,7 @@ $_SESSION['nbvisites']++;
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,15 +27,14 @@ $_SESSION['nbvisites']++;
 </head>
 
 <body>
-<div>
-    <div><?php echo $_SESSION['nbvisites'];?></div>
+    <div>
+        <div><?php echo $_SESSION['nbvisites']; ?></div>
 
-    <form action="" method="post">
-        <button type="submit" name="reset">RESET</button>
-    </form>
-</div>
-   
+        <form action="" method="post">
+            <button type="submit" name="reset">RESET</button>
+        </form>
+    </div>
+
 </body>
 
 </html>
-

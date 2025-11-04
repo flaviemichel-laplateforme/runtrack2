@@ -93,13 +93,14 @@ if ($matchNul && $_SESSION['gagnant'] === null) {
         table {
             border-collapse: collapse;
             margin: 20px auto;
+            background-color: #b9acacff;
         }
 
         td {
-            width: 60px;
-            height: 60px;
+            width: 100px;
+            height: 100px;
             text-align: center;
-            border: 2px solid #333;
+            border: 2px solid #000000ff;
         }
 
         button {
